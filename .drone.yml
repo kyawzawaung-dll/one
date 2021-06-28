@@ -1,23 +1,19 @@
 kind: pipeline
 type: docker
-name: test
+name: default
 
 steps:
 - name: backend
-  image: php
+  image: golang
   commands:
-  - echo "This is step 2".
+  - go build
+  - go test
 
 - name: frontend
-  image: php
+  image: node
   commands:
-  - echo "This is step 2".
-
-  
-- name: frontend
-  image: php
-  commands:
-  - echo "This is step three".
+  - npm install
+  - npm test
 
 
   depends_on:
