@@ -6,7 +6,7 @@ steps:
 - name: backend
   image: php
   commands:
-  - echo "This is step 1".
+  - echo "This is step 2".
 
 - name: frontend
   image: php
