@@ -17,7 +17,7 @@ steps:
 - name: frontend
   image: php
   commands:
-  - echo "This is step 3".
+  - echo "This is step three".
 
 
   depends_on:
